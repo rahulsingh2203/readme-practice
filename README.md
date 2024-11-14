@@ -15,3 +15,13 @@ Workflow is structured in the following template:
     - steps
   - deploy
     - steps
+
+#### Build
+
+- First of all we use GitHub's own runner where we perform tasks involved in the build job.
+- steps include checking out repository, installing application dependencies, generating artifacts and uploading it
+
+#### Deploy
+
+- For this job also, we use GitHub's own runner where we perform task involved in the deploy job.
+- steps include, downloading artifacts in runner, establishing connection between runner and remote server, performing file copying, directory creating, deletion snd modification and generating backup using appleboy's ssh and scp actions.
