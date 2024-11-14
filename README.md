@@ -11,4 +11,7 @@ Workflow is structured in the following template:
 - name
 - on
 - jobs
-  -  
+  - build
+    - steps
+  - deploy
+    - steps
